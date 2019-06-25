@@ -9,12 +9,13 @@ public class HuobiMission {
     public static void run(String sessionId) {
         String url = HuobiUrls.USDT_SELL;
         Huobi huobi = new Huobi();
+        huobi.setProvider("huobi");
+        huobi.setProvider(Constants.PROVIDER);
 
         huobi.setCoinName("usdt");
         huobi.setType("sell");
         huobi.setJson(WebUtil.sendGet(url));
         huobi.setSessionId(sessionId);
-        huobi.setProvider(Constants.PROVIDER);
         huobi.setTimestamp(new Timestamp(System.currentTimeMillis()));
         huobi.setUrl(url);
         HuobiDao.save(huobi);
