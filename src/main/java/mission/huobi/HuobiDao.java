@@ -1,4 +1,4 @@
-package bean;
+package mission.huobi;
 
 import util.JdbcUtil;
 

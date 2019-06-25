@@ -1,8 +1,6 @@
-package mission;
+package mission.huobi;
 
-import bean.Huobi;
-import bean.HuobiDao;
-import start.HuobiUrls;
+import util.Constants;
 import util.WebUtil;
 
 import java.sql.Timestamp;
@@ -16,7 +14,7 @@ public class HuobiMission {
         huobi.setType("sell");
         huobi.setJson(WebUtil.sendGet(url));
         huobi.setSessionId(sessionId);
-        huobi.setProvider("GoogleCloud-mysql");
+        huobi.setProvider(Constants.PROVIDER);
         huobi.setTimestamp(new Timestamp(System.currentTimeMillis()));
         huobi.setUrl(url);
         HuobiDao.save(huobi);

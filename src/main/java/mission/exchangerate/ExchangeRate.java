@@ -1,13 +1,11 @@
-package bean;
+package mission.exchangerate;
 
 import java.sql.Timestamp;
 
-public class Huobi {
+public class ExchangeRate {
     private Integer id;
-    private String platform;
-    private String coinName;
     private String json;
-    private String type;
+    private String platform;
     private String sessionId;
     private String url;
     private String provider;
@@ -21,22 +19,6 @@ public class Huobi {
         this.id = id;
     }
 
-    public String getPlatform() {
-        return platform;
-    }
-
-    public void setPlatform(String platform) {
-        this.platform = platform;
-    }
-
-    public String getCoinName() {
-        return coinName;
-    }
-
-    public void setCoinName(String coinName) {
-        this.coinName = coinName;
-    }
-
     public String getJson() {
         return json;
     }
@@ -45,12 +27,12 @@ public class Huobi {
         this.json = json;
     }
 
-    public String getType() {
-        return type;
+    public String getPlatform() {
+        return platform;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setPlatform(String platform) {
+        this.platform = platform;
     }
 
     public String getSessionId() {
