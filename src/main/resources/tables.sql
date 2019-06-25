@@ -23,3 +23,16 @@ CREATE TABLE `exchange_rate`
     `timestamp` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)
 );
+
+CREATE TABLE `coin`
+(
+    `id`        INT NOT NULL AUTO_INCREMENT,
+    `json`      MEDIUMTEXT,
+    `coinName`  TEXT,
+    `platform`  TEXT,
+    `sessionId` TEXT,
+    `url`       TEXT,
+    `provider`  TEXT,
+    `timestamp` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+);
